@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>펫라이프케어 개인정보처리방침</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0dc38281-c3e3-4670-b4ae-7251dc283fee" class="page sans"><header><h1 class="page-title">펫라이프케어 <strong>개인정보처리방침</strong></h1></header><div class="page-body"><p id="9bc78f01-cc30-40c7-a15a-53469fa973cb" class=""><em>&lt; (주)더스팟 &gt;(&#x27;펫케어라이프&#x27;이하 &#x27;PetLifeCare&#x27;)</em>은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p><p id="1fdd152c-16f8-42a5-a1dd-a97b08a97bb3" class="">
+</p><p id="92271271-cdca-4fb9-bcf2-ad6d30f7c820" class="">○ 이 개인정보처리방침은 <em>2022</em>년 <em>12</em>월 <em>21</em>부터 적용됩니다.</p><p id="12b34b3a-77ad-4b37-872c-4a82ee67e09e" class="">
+</p><p id="e6fe9c20-4ae8-489f-8da5-923e5263ddbb" class=""><strong>제1조(개인정보의 처리 목적) </strong><em><strong>&lt; (주)더스팟 &gt;(&#x27;펫라이프케어&#x27;이하 &#x27;PetLifeCare&#x27;)</strong></em><strong>은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</strong></p><p id="d16523e5-0193-477f-9b34-5a64527b4777" class="">1. 홈페이지 회원가입 및 관리</p><p id="8c9690b3-3298-4f8b-a878-2683714af3f1" class="">회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 서비스 부정이용 방지, 각종 고지·통지 목적으로 개인정보를 처리합니다.</p><p id="38ec2587-f8ac-43da-8096-588a358891fe" class="">2. 재화 또는 서비스 제공</p><p id="e6b8a0db-0da7-4803-8358-bd90f192f5bb" class="">물품배송, 서비스 제공, 콘텐츠 제공, 맞춤서비스 제공, 본인인증을 목적으로 개인정보를 처리합니다.</p><p id="52829301-99bd-428d-8a1a-565df20432d0" class="">3. 마케팅 및 광고에의 활용</p><p id="d728df95-4e6c-4677-be7f-aa526bd226ab" class="">신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 등을 목적으로 개인정보를 처리합니다.</p><p id="f7105c19-68ea-4ddc-b844-ab2abade38c1" class=""><strong>제2조(개인정보의 처리 및 보유 기간)</strong></p><p id="f25f233e-d9a1-4c0c-b5d3-549b6f21a895" class="">① <em>&lt; (주)더스팟 &gt;</em>은(는) 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p><p id="62b1432d-fcc8-4929-8290-bb47946ecdcd" class="">② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p><ol type="1" id="7ef954d8-494b-4f17-a6f3-5a49afb040ff" class="numbered-list" start="1"><li>와 관련한 개인정보는 수집.이용에 관한 동의일로부터까지 위 이용목적을 위하여 보유.이용됩니다.</li></ol><ol type="1" id="be2ca3e8-987b-4230-b4d3-2d827c595c4e" class="numbered-list" start="2"><li>보유근거 : 「개인정보 보호법」 제15조(개인정보의 수집·이용) 제1항</li></ol><p id="5694917a-af83-4bd8-8f6d-85f5975e87a0" class=""><strong>제3조(처리하는 개인정보의 항목)</strong></p><p id="1a9bf0d7-1477-4440-bc6d-32846482232d" class="">① <em>&lt; (주)더스팟 &gt;</em>은(는) 다음의 개인정보 항목을 처리하고 있습니다.</p><p id="462aa930-185e-4489-b931-235f814e626c" class="">&lt; 서비스 회원가입, 회원 관리 및 서비스 제공 &gt;</p><p id="4429de9b-9905-47cc-8e25-c3f6cb8ee846" class="">필수항목 : 이메일, 휴대전화번호, 이름</p><p id="fd58ddd0-402e-4987-bf32-1a28a267a0a5" class="">선택항목 : 자택주소, 성별, 생년월일, 반려동물 정보, 외부장치에서 수집된 반려동물 데이터</p><p id="4920d3d3-da55-4e77-8ad2-41cfc820e190" class=""><strong>제4조(개인정보의 제3자 제공에 관한 사항)</strong></p><p id="40d28d05-692a-4bbb-8667-a13796ea1bb2" class="">① <em>&lt; (주)더스팟 &gt;은(는) 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</em></p><p id="4b5ff4f9-15d5-45d3-86d2-75708ee4c0da" class=""><em>② &lt; (주)더스팟 &gt;은(는) 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</em></p><table id="e79f4e56-f28f-4daa-a756-0eac5c3ade8b" class="simple-table"><tbody><tr id="753f0ee7-d7ce-4d20-bb03-6fb3078c264a"><td id="dukf" class="" style="width:1069px"><em>1. &lt; (주)NBIT &gt;</em></td></tr><tr id="400940c6-18db-4d00-9175-e106b676849f"><td id="dukf" class="" style="width:1069px"><em>개인정보를 제공받는 자 : (주)NBIT</em></td></tr><tr id="321bea60-340a-4c4d-9b95-32a2c806f3d6"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 개인정보 이용목적 : 이메일, 휴대전화번호, 자택주소, 반려동물 정보</em></td></tr><tr id="6eaf7588-37b8-40d5-a85d-54aa50fe8909"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 보유.이용기간: 5년</em></td></tr><tr id="37ab38ac-4a7c-42cb-a8ad-2ac294bd4f84"><td id="dukf" class="" style="width:1069px"><em>2. &lt; C&amp;I토탈솔루션 &gt;</em></td></tr><tr id="65d5a703-709d-4b2c-bcbd-1bf5e86b54e1"><td id="dukf" class="" style="width:1069px"><em>개인정보를 제공받는 자 : C&amp;I토탈솔루션</em></td></tr><tr id="054e8d63-390b-4e17-b22a-228ad6371c8b"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 개인정보 이용목적 : 이메일, 휴대전화번호, 이름, 외부장치에서 수집된 반려동물 데이터</em></td></tr><tr id="3570feac-740d-4fc1-901b-bcaf075204cc"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 보유.이용기간: 5년</em></td></tr><tr id="fa8a5c73-665f-412a-b018-5a1d6fc663be"><td id="dukf" class="" style="width:1069px"><em>3. &lt; (주)GUO2 &gt;</em></td></tr><tr id="66777b2c-432f-4006-b787-7a32c7776f2f"><td id="dukf" class="" style="width:1069px"><em>개인정보를 제공받는 자 : (주)GUO2</em></td></tr><tr id="87007636-cfd4-4187-aae4-fdb70dbc8002"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 개인정보 이용목적 : 이메일, 휴대전화번호, 반려동물 정보</em></td></tr><tr id="82e8995d-b364-4239-8ab4-ce3d7a09456b"><td id="dukf" class="" style="width:1069px"><em>제공받는 자의 보유.이용기간: 5년</em></td></tr></tbody></table><p id="5afd0804-ad13-42ae-902a-397b493aefe3" class="">
+</p><p id="9e703627-bb48-4b8e-94b1-1abf0f19b4e9" class=""><em><strong>제5조(개인정보처리의 위탁에 관한 사항)</strong></em></p><p id="ffac6207-ed07-4098-9930-69c403c75bb3" class=""><em>① &lt; (주)더스팟 &gt;은(는) 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</em></p><table id="c1cd64d7-a49e-467c-9bd6-b05d9dda9ca4" class="simple-table"><tbody><tr id="6f33895f-5333-4251-be2a-a04897df1335"><td id="C:jS" class="" style="width:1073px"><em>1. &lt; 부트페이 &gt;</em></td></tr><tr id="af6190c9-d252-42b0-b397-8c8c600e072b"><td id="C:jS" class="" style="width:1073px"><em>위탁받는 자 (수탁자) : (주)부트페이</em></td></tr><tr id="9834bf50-3c60-4242-8da6-d18d2fed0d5a"><td id="C:jS" class="" style="width:1073px"><em>위탁하는 업무의 내용 : 온라인 결제 대행</em></td></tr><tr id="10581e6b-be19-4f42-acdc-29651e055753"><td id="C:jS" class="" style="width:1073px"><em>위탁기간 : 서비스 종료시 까지</em></td></tr><tr id="5a3d41fd-1b08-4842-9d72-d7bcbcf9dfbd"><td id="C:jS" class="" style="width:1073px"><em>2. &lt; 아마존웹서비스 &gt;</em></td></tr><tr id="0d7de3be-5a8f-46e3-9b42-71a416ddc07b"><td id="C:jS" class="" style="width:1073px"><em>위탁받는 자 (수탁자) : 아마존웹서비스</em></td></tr><tr id="e560181e-2614-4c54-b026-5d4592d5a6e4"><td id="C:jS" class="" style="width:1073px"><em>위탁하는 업무의 내용 : 클라우드 서버 운영</em></td></tr><tr id="5311aa5e-16bd-486e-9081-403add3313c5"><td id="C:jS" class="" style="width:1073px"><em>위탁기간 : 서비스 종료시 까지</em></td></tr></tbody></table><p id="ba15bbdb-be57-4f81-8fda-225e94f15ff3" class=""><em>② &lt; (주)더스팟 &gt;은(는) 위탁계약 체결시 「개인정보 보호법」 제26조에 따라 위탁업무 수행목적 외 개인정보 처리금지, 기술적․관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리․감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</em></p><p id="e700c0b5-8ced-4630-9908-1e7dc30c6554" class=""><em>③ 위탁업무의 내용이나 수탁자가 변경될 경우에는 지체없이 본 개인정보 처리방침을 통하여 공개하도록 하겠습니다.</em></p><p id="c0b489c9-ecc2-4509-977d-f0733be05474" class="">
+</p><p id="c89b92fe-4476-471d-af98-c2dbd14bdbd8" class=""><em><strong>제6조(개인정보의 파기절차 및 파기방법)</strong></em></p><p id="e29fec10-edb9-4819-b1f3-71a9940b4e55" class=""><em>① &lt; (주)더스팟 &gt; 은(는) 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</em></p><p id="af7fe50a-2e16-42e3-b8f2-3bcc637beac4" class=""><em>② 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</em></p><p id="7c9cb8ad-30b0-48a0-91d0-89b891ae66be" class=""><em>③ 개인정보 파기의 절차 및 방법은 다음과 같습니다.</em></p><p id="236cc82b-8337-4d2d-8081-e8f78fabc274" class=""><em>1. 파기절차</em></p><p id="484cc68c-9a44-4c18-aaea-0289f76d1d65" class=""><em>&lt; (주)더스팟 &gt; 은(는) 파기 사유가 발생한 개인정보를 선정하고, &lt; (주)더스팟 &gt; 의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.</em></p><p id="d8f84f18-bac1-4b4f-bccd-a4cb0963619c" class=""><em>2. 파기방법</em></p><p id="87031129-6dd8-4625-9240-7380b9076fc8" class=""><em>전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다</em></p><p id="9f4d4a14-c8db-4fef-a752-dadea54bfd81" class="">
+</p><p id="18fdad63-87f6-401c-890f-96d88dd3b315" class=""><em><strong>제7조(정보주체와 법정대리인의 권리·의무 및 그 행사방법에 관한 사항)</strong></em></p><p id="77a96132-7619-4b80-9af0-f5c17353ab51" class=""><em>① 정보주체는 (주)더스팟에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.</em></p><p id="08ece848-3506-4eed-8d41-1aa9f1bb8411" class=""><em>② 제1항에 따른 권리 행사는(주)더스팟에 대해 「개인정보 보호법」 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 (주)더스팟은(는) 이에 대해 지체 없이 조치하겠습니다.</em></p><p id="d6f24a61-2ee7-4a58-b702-30e375104e0d" class=""><em>③ 제1항에 따른 권리 행사는 정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다.이 경우 “개인정보 처리 방법에 관한 고시(제2020-7호)” 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</em></p><p id="cc7700ca-801b-41a5-a273-b1a5d9dedd7f" class=""><em>④ 개인정보 열람 및 처리정지 요구는 「개인정보 보호법」 제35조 제4항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</em></p><p id="09087917-85dd-499a-a686-096e616027dc" class=""><em>⑤ 개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</em></p><p id="dc629709-b77f-4abc-bb32-57b99e4d9b11" class=""><em>⑥ (주)더스팟은(는) 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</em></p><p id="f6eaae2f-0142-4c17-abeb-a7ebedcec660" class="">
+</p><p id="58c07525-4ca1-4e5b-8650-fa477c713e08" class=""><em><strong>제8조(개인정보의 안전성 확보조치에 관한 사항)</strong></em></p><p id="edca249f-4001-4537-909f-10f7cacdfe29" class=""><em><strong>&lt; (주)더스팟 &gt;은(는) 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</strong></em></p><p id="e7efad73-0064-4b34-a998-6ac05f31df4a" class=""><em>1. 내부관리계획의 수립 및 시행</em></p><p id="e944b0e0-d3f8-47e3-a04d-ec233d3eeeaf" class=""><em>개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다.</em></p><p id="69490d63-5a19-4b2d-979b-30e65244073a" class=""><em>2. 개인정보의 암호화</em></p><p id="e22b3061-1d9b-47f7-92ea-c52125e53887" class=""><em>이용자의 개인정보는 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</em></p><p id="c46401cd-3b8f-4a5c-a609-0fce3ebda7ac" class=""><em>3. 개인정보에 대한 접근 제한</em></p><p id="a28029ba-8fc3-43ff-b54a-8e67c6d3e5bc" class=""><em>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여,변경,말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.</em></p><p id="931d2161-fc7e-484b-8ad6-456679dd5aa7" class=""><em>4. 비인가자에 대한 출입 통제</em></p><p id="38c337af-6b16-4cc9-8032-90a8cdd99559" class=""><em>개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</em></p><p id="8b10d054-7a73-4c3a-84ca-cb5f92c16a58" class="">
+</p><p id="1bb9358e-cac1-457a-9992-eb263a2393ca" class=""><em><strong>제9조(개인정보를 자동으로 수집하는 장치의 설치·운영 및 그 거부에 관한 사항)</strong></em></p><p id="8fe38776-e28f-43ee-a9a0-7ad399c79d31" class=""><em>① (주)더스팟 은(는) 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다.</em></p><p id="e413ca30-3b62-44c5-b3e5-f4c41d305946" class=""><em>② 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</em></p><p id="a26c489c-e26d-4908-9b75-8047491fa879" class=""><em>가. 쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 보안접속 여부, 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용됩니다.</em></p><p id="d7cc2954-4cc1-4527-8704-7866048b5681" class=""><em>나. 쿠키의 설치•운영 및 거부 : 웹브라우저 상단의 도구&gt;인터넷 옵션&gt;개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다.</em></p><p id="eb37323e-82c7-4395-95b8-6389413ee0c6" class=""><em>다. 쿠키 저장을 거부할 경우 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다.</em></p><p id="d1846e92-07b4-4e48-91b2-a11345057e3a" class="">
+</p><p id="5c520c62-5b80-4cad-8577-b653441dbb83" class=""><em><strong>제10조(행태정보의 수집·이용·제공 및 거부 등에 관한 사항)</strong></em></p><p id="1237465c-4ccf-4e49-92e5-54e948bcc914" class=""><em>행태정보의 수집·이용·제공 및 거부등에 관한 사항은(는) 온라인 맞춤형 광고 등을 위한 행태정보를 수집·이용·제공하지 않습니다.</em></p><p id="3e1b202c-1eef-4c5e-a411-58330e46dbd5" class="">
+</p><p id="3f506b88-349a-410c-b5c3-709366e1cf2c" class=""><em><strong>제11조(추가적인 이용·제공 판단기준)</strong></em></p><p id="4f0b2cf6-43d8-4b50-bc00-8818cb1a8c00" class=""><em>&lt; (주)더스팟 &gt; 은(는) ｢개인정보 보호법｣ 제15조제3항 및 제17조제4항에 따라 ｢개인정보 보호법 시행령｣ 제14조의2에 따른 사항을 고려하여 정보주체의 동의 없이 개인정보를 추가적으로 이용·제공할 수 있습니다.</em></p><p id="b62ddb68-717f-45c4-8513-e26706049d85" class=""><em>이에 따라 &lt; (주)더스팟 &gt; 가(이) 정보주체의 동의 없이 추가적인 이용·제공을 하기 위해서 다음과 같은 사항을 고려하였습니다.</em></p><p id="aca417ed-c4b6-40b2-9d59-a0a46b431d49" class=""><em>▶ 개인정보를 추가적으로 이용·제공하려는 목적이 당초 수집 목적과 관련성이 있는지 여부</em></p><p id="dcdc6ddf-abab-4f49-8d95-615561ee9570" class=""><em>▶ 개인정보를 수집한 정황 또는 처리 관행에 비추어 볼 때 추가적인 이용·제공에 대한 예측 가능성이 있는지 여부</em></p><p id="5e95cbc5-9d14-474f-a121-86ca2d17cf7d" class=""><em>▶ 개인정보의 추가적인 이용·제공이 정보주체의 이익을 부당하게 침해하는지 여부</em></p><p id="8b04d20e-052f-49e6-83ca-07875a760892" class=""><em>▶ 가명처리 또는 암호화 등 안전성 확보에 필요한 조치를 하였는지 여부</em></p><p id="c7ca2426-51ef-4b96-b9ba-d64483906a52" class=""><em>※ 추가적인 이용·제공 시 고려사항에 대한 판단기준은 사업자/단체 스스로 자율적으로 판단하여 작성·공개함</em></p><p id="d231c7bc-ed1a-4dde-9106-df365fb3049a" class="">
+</p><p id="7485143b-db6a-49aa-9f9f-81ba414725bc" class=""><em><strong>제12조 (개인정보 보호책임자에 관한 사항)</strong></em></p><p id="3fcdb46d-50ad-495a-8ab1-53db4da7632b" class=""><em>▶ 개인정보 보호책임자</em></p><p id="756ebf9d-6ddb-499e-ad46-c18b0dadf791" class="">담당 : 나성훈</p><p id="8d1611ee-822e-4a7e-a0ac-91bd732c5cfe" class="">연락처 : help@thespot.kr </p><p id="d7a23104-5679-42ba-93f0-19c909fed1de" class=""><em>※ 개인정보 보호 담당부서로 연결됩니다.</em></p><p id="2bd3b0fd-89b7-427b-b52c-07e560ca181a" class=""><em>▶ 개인정보 보호 담당부서</em></p><p id="0c97d8a7-da03-4469-b803-de39354a655c" class="">연락처: help@thespot.kr</p><p id="6e2f3da1-8a1e-4ca6-8fbd-485435335f2c" class="">
+</p><p id="e68a973b-8730-44cd-93a2-c50e1a82291f" class=""><em><strong>제14조(개인정보의 열람청구를 접수·처리하는 부서)</strong></em></p><p id="735b422e-ae39-4be1-a9e9-9d1bbf5e4b20" class=""><em><strong>정보주체는 ｢개인정보 보호법｣ 제35조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다</strong></em></p><p id="398c2158-7f9b-4bd2-8f04-b028d10df6f6" class=""><em>▶ 개인정보 열람청구 접수·처리 부서</em></p><p id="857cd39a-4b6c-4036-8781-79fc2ba351c8" class="">담당: 개인정보 보호 담당부서</p><p id="20153927-67c0-4744-88d9-e36621ac83c6" class="">이메일: help@thespot.kr</p><p id="bec6cbac-5d2c-4ea1-8f2c-8ceff52385d2" class="">
+</p><p id="abf842ea-7912-454a-8542-d5c90b542752" class=""><em><strong>제15조(정보주체의 권익침해에 대한 구제방법)</strong></em></p><p id="bb97a9c9-884a-493b-a102-2217065c9510" class=""><em>정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</em></p><p id="45d6e41c-03da-4f1f-b73c-2aff1e16bfe8" class=""><em>1. 개인정보분쟁조정위원회 : (국번없이) 1833-6972 (www.kopico.go.kr)</em></p><p id="29f921e7-b8fa-4830-80d8-df62954fa688" class=""><em>2. 개인정보침해신고센터 : (국번없이) 118 (privacy.kisa.or.kr)</em></p><p id="626062a1-6efa-474f-999c-ade85b92dbf1" class=""><em>3. 대검찰청 : (국번없이) 1301 (www.spo.go.kr)</em></p><p id="7c986d22-731f-48bd-9507-b6aba2549e15" class=""><em>4. 경찰청 : (국번없이) 182 (ecrm.cyber.go.kr)</em></p><p id="463c3a8d-5b1c-47a9-8fe6-a2095805c1e0" class=""><em>「개인정보보호법」제35조(개인정보의 열람), 제36조(개인정보의 정정·삭제), 제37조(개인정보의 처리정지 등)의 규정에 의한 요구에 대 하여 공공기관의 장이 행한 처분 또는 부작위로 인하여 권리 또는 이익의 침해를 받은 자는 행정심판법이 정하는 바에 따라 행정심판을 청구할 수 있습니다.</em></p><p id="32b136e9-4239-45d0-97ab-4be933d5bd39" class=""><em>※ 행정심판에 대해 자세한 사항은 중앙행정심판위원회(www.simpan.go.kr) 홈페이지를 참고하시기 바랍니다.</em></p><p id="775172cb-4a69-410b-a4d6-6ca917f3c78a" class="">
+</p><p id="665e1a37-575a-47fb-a9a3-9a536aee0780" class=""><em><strong>제16조(개인정보 처리방침 변경)</strong></em></p><p id="cecf18f6-22f9-4fc7-984a-414dcf54faa8" class=""><em>① 이 개인정보처리방침은 2022년 12월 21부터 적용됩니다.</em></p><p id="3e2b5f70-69b3-4d5c-8e26-214444d7cfda" class="">
+</p></div></article></body></html>
