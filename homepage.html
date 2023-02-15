@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>반려동물 건강관리, 
+PetLifeCare</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c52b3f6a-1c04-4862-921f-b00c268d11f3" class="page sans"><header><img class="page-cover-image" src="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-26_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_3.18.29.png" style="object-position:center 55.74%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2021-11-16_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_10.46.37.png"/></div><h1 class="page-title">반려동물 건강관리, 
+PetLifeCare</h1></header><div class="page-body"><h1 id="aeade093-b2e6-4b82-b837-dc7c1c26c081" class="">
+<mark class="highlight-gray">펫라이프케어는
+IoT 기기로 </mark>동물의 건강 상태를 측정<mark class="highlight-gray">하고</mark>
+건강 정보를 저장<mark class="highlight-gray">하여 </mark>반려 동물의 생애주기를 관리<mark class="highlight-gray">하는</mark>
+동물용 헬스케어 앱서비스<mark class="highlight-gray">입니다.</mark>
+
+
+<mark class="highlight-gray">우리의 삶 속에 </mark>반려동물과 함께
+건강히 살아가는 세상<mark class="highlight-gray">을 꿈꿉니다.</mark></h1><p id="87e92e44-a374-4b43-9d02-e9c71d44d802" class="">
+</p><p id="0f77b790-6b90-4baf-a26a-35359fcc1d05" class="">
+</p><div id="112c014f-d953-4d23-8fd4-b2327cd453bc" class="column-list"><div id="7fd763af-9c74-40cc-bcc3-309a52735084" style="width:62.5%" class="column"><figure id="fcacf24b-5bc5-428e-90f4-718050ad625a" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-26_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.01.03.png"><img style="width:1724px" src="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-26_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_5.01.03.png"/></a></figure></div><div id="5f7d3701-1064-48e4-b2f2-e0b87cd1546d" style="width:37.49999999999999%" class="column"><h2 id="58d3a489-ae3e-4119-9a5d-0026e967a502" class=""><mark class="highlight-orange">핵심기능 +</mark></h2><h3 id="18683979-6775-4bd7-a74e-4b5544abb1b6" class=""><mark class="highlight-orange_background">IoT 기기 연동 및 측정</mark></h3><p id="ab2194d0-2703-4432-9527-cb93cdfd92dd" class="">해당 날짜에 실시간 심박수, 산소포화도, 반려동물의 체온 데이터를 생성하여 수집합니다.
+</p><h3 id="6e480949-bca8-43cf-80c4-f60e3f71c431" class=""><mark class="highlight-orange_background">DNA 검체 측정 서비스</mark></h3><p id="fa5251ea-b4dc-4389-a965-15bf732b535a" class="">검사를 통해 우리 아이의 혈통과 유전병 정보를 미리 알아볼 수 있습니다.</p><p id="3789da55-0e76-4688-9dde-66cdbb3f87d9" class="">
+</p><h3 id="51b3481e-7762-4877-9acc-b1d5a9e0099b" class=""><mark class="highlight-orange_background">반려동물 블록체인 인증서</mark></h3><p id="3eeb938b-ae88-4c92-8bad-5c6c368576d1" class="">우리 아이의 건강 데이터를 안전한 블록체인에 저장하여 영구히 보관합니다.</p><p id="86cd738c-b548-4b2f-a86b-9799229ba229" class="">
+</p></div></div><p id="09b535dd-6d0c-447a-b576-788ca6eb6824" class="">
+</p><p id="00c341d9-04d2-42c9-9856-50d6f48942f8" class="">
+</p><h1 id="673152ec-41f8-46a6-9318-72334f05b58e" class="">🗞️<strong> 펫라이프케어의 스토리 —</strong></h1><hr id="0d0186cd-cb03-4c1d-b614-6214c1e2ff07"/><h2 id="42c7b802-ae54-4df9-9cf6-2165918335cb" class="">반려동물과 사람이 함께 하는 삶
+그 사이에 <span style="border-bottom:0.05em solid">소통창구</span>가 되기를 희망합니다.</h2><p id="eb95e032-c7cd-48dd-a4fa-05f8f3c39c44" class="">
+</p><h3 id="f2ca26e6-0423-48b2-97b8-f20ea75f94b7" class=""><mark class="highlight-gray">우리는 반려동물과 꽤 오랜 세월 함께합니다.
+하지만 그들이 아프고 나서야 병원에 데리고 가며,
+꼭 큰일이 생긴 뒤 큰 비용을 들여 해결해야만 합니다.</mark>
+
+<mark class="highlight-gray">펫라이프케어는 </mark>평범한 반려인부터 수의사를 포함한 전문가까지,<mark class="highlight-gray">
+전세계 반려인이 고민하는 문제를 해결하고자</mark>
+
+<mark class="highlight-orange_background">”동물의 생애주기를 관리할 수 있는 반려동물 건강관리 솔루션”</mark>
+<mark class="highlight-orange">Pet Life Care</mark><mark class="highlight-gray">를 출시하게 되었습니다.</mark></h3><p id="792286ad-a8b4-48d7-9cf3-86b6dfc29024" class="">
+</p><p id="060d3988-1c15-4f4f-a608-e1430c1a7c99" class="">
+</p><p id="1003e663-2753-4fd7-8254-39dda9656046" class="">
+</p><h1 id="5c2c4bf0-342f-4e4c-bc71-1893b77c4134" class="">✍️ 펫라이프케어는 어떤 문제를 해결하나요?</h1><hr id="d40e1b1d-12d2-4948-b826-9519fb9bfe60"/><p id="44a002e0-bf6e-4f90-b342-cfa8ff0dc7ec" class="">
+</p><blockquote id="611e115a-fa3c-4197-8a73-98e6af204da0" class=""><strong>&quot;수열씨는 백구의 하루 입원비가 100만원 가량 된다고 했다.
+… 경제적인 부담 때문에 치료를 망설이게 되는 건 괴로운 일이다.&quot;</strong>
+<mark class="highlight-gray">— 반려동물이 아플때 경제적 부담으로 인해 치료시기를 놓쳐선 안됩니다.</mark></blockquote><figure id="79fb7409-3eea-4d74-ac3c-7e888221c362"><a href="https://www.khan.co.kr/national/national-general/article/202301111900021" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">[반려시대, 누구랑 사세요?③] 늘 아이 같은 네가 늙고 아플 줄은 몰랐어</div><div class="bookmark-description">백구의 엉덩이와 발이 설사가 묻어 누렇게 변했다. 열네 살 푸들인 백구는 제대로 먹지 못하고 설사를 계속했다. 듬성듬성 빠진 털 사이로 검은 반점이 핀 맨살이 보였다. 정준용·최우진 수의사가 체온·혈압·혈당 등을 검사하고, 개수대로 데려가 엉덩이와 발을 꼼꼼히 닦아줬다. 털이 다 빠진 짧은 꼬리가 바들바들 떨렸다. 지난달 19일 오전 건국대 부속 동물병원 응급중환자실(ICU실)에서 만난 백구는 전달 말부터 입원과 퇴원을 반복했다.</div></div><div class="bookmark-href"><img src="https://img.khan.co.kr/spko/icon/favicon.ico" class="icon bookmark-icon"/>https://www.khan.co.kr/national/national-general/article/202301111900021</div></div><img src="https://img.khan.co.kr/news/2023/01/11/news-p.v1.20230110.531afe0305ee493d8db1f7f1f99f6964_P1.jpg" class="bookmark-image"/></a></figure><p id="8cea9516-dcb7-482a-ab51-c9e6a84f2357" class="">
+</p><h2 id="4657dded-f4ae-4810-9f6c-9da13017d758" class=""><mark class="highlight-gray">펫라이프케어는 보호자에게
+</mark><mark class="highlight-orange_background">”반려동물의 생애주기를 살펴, 빠르고 정확한 건강 상태를 제공해”</mark>
+<span style="border-bottom:0.05em solid">건강한 반려 문화를 지속 가능하도록</span> <mark class="highlight-gray">하고자 합니다.</mark></h2><p id="c3298562-8a57-40b2-b373-44074de690a2" class="">
+</p><p id="07b6839b-95bb-44b1-8d4a-431fdc71eee0" class="">
+</p><p id="04dae3ab-ff7e-49b5-b3ea-abf414bdbd16" class="">
+</p><h1 id="83260188-49a7-47a4-ad68-7b779c592f49" class="">🕹️ App 다운로드</h1><hr id="aeb8fb27-f77c-4b1d-91a2-49b4ad00633d"/><figure id="a3894265-c434-4375-aa67-ebfa02306c49" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/Untitled.png"><img style="width:1210px" src="%E1%84%87%E1%85%A1%E1%86%AB%E1%84%85%E1%85%A7%E1%84%83%E1%85%A9%E1%86%BC%E1%84%86%E1%85%AE%E1%86%AF%20%E1%84%80%E1%85%A5%E1%86%AB%E1%84%80%E1%85%A1%E1%86%BC%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5,%20PetLifeCare%20c52b3f6a1c044862921fb00c268d11f3/Untitled.png"/></a></figure><p id="31717791-69de-4f9b-aac8-ceb8b9fbcc42" class="">
+</p><p id="152f5820-b655-4ca2-9bba-15a38d95635c" class="">
+</p><p id="28cf4d3d-d6df-4d86-bcf7-82a9c4414962" class="">
+</p><p id="2728862e-c9f8-4fc4-8f71-bdfa16d76d1a" class="">
+</p><p id="c5c95cde-0c29-4d8e-8d11-0df50d2644cb" class="">
+</p><div><figure id="d61622dd-f9e9-4c45-b575-c7aef19c68a1" class="image"><a href="%E1%84%91%E1%85%A6%E1%86%BA%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B3%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%A5%2003b41555779d47fbbd0420df0ce12802/01__dark.png"><img style="width:192px" src="%E1%84%91%E1%85%A6%E1%86%BA%E1%84%85%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%91%E1%85%B3%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%A5%2003b41555779d47fbbd0420df0ce12802/01__dark.png"/></a></figure><hr id="29cee3db-56df-46b8-9797-e57866bb3b60"/><p id="07f0e505-c8a7-470c-86d2-0a62e538f118" class=""><mark class="highlight-gray">법인명: 주식회사 더스팟 | 대표: 나성훈, 김영덕
+사업자등록번호: 848-81-01415 | 통신판매신고번호: 2021-서울성북-1733</mark></p><p id="cc08e800-200b-4004-8eb2-f99a00db3d52" class="block-color-gray">본사: <mark class="highlight-gray">서울특별시 성북구 안암로 145, 고려대학교 R&amp;D센터 640A
+연구소: </mark>서울특별시 성북구 고려대로26길 49, 태종빌딩 301호 (주)더스팟</p><p id="f835deb7-06a7-4281-a6ec-d377e5d1c140" class="block-color-gray">Copyright © 2021 the spot Inc. All rights reserved.</p></div><p id="011ae874-ea5e-4aef-9075-697f870a6a73" class="">
+</p></div></article></body></html>
